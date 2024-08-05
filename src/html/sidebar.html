@@ -1,0 +1,65 @@
+<div class="sidebar">
+    <section class="sidebar__widget">
+        <form action="" class="sidebar__searchform">
+            <input class="sidebar__searchform-input" type="text">
+            <button class="sidebar__searchform-button"><i class="icon-search"></i></button>
+        </form>
+    </section>
+    <section class="sidebar__widget">
+        <div class="sidebar__title-wrapp"><h3 class="sidebar__title"><span>Отзывы</span></h3></div>
+        <div class="sidebar__widget-wrapper">
+            <div class="swiper sidebar__widget-reviews">
+                <div class="swiper-wrapper sidebar__widget-reviews-wrapp">
+                    @@include('cartreviews.html', {}) 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sidebar__widget">
+        <div class="sidebar__title-wrapp"><h3 class="sidebar__title"><span>Вакансии</span></h3></div>
+        <div class="sidebar__widget-wrapper">
+            <div class="swiper sidebar__widget-vakan">
+                <div class="swiper-wrapper sidebar__widget-vakan-wrapp">
+                    @@include('cartvakansii.html', {}) 
+                </div>
+            </div>
+            <div class="sidebar__button-wrapp">
+            <a class="button-blue sidebar__button-vakan" href="">Все Вакансии</a>
+        </div>
+        </div>
+    </section>
+
+    <section class="sidebar__widget">
+        <div class="sidebar__title-wrapp"><h3 class="sidebar__title"><span>Категории</span></h3></div>
+        <div class="sidebar__widget-wrapper">
+            <ul class="sidebar__category-list">
+                <li class="sidebar__category-item">
+                    <a href="">  <img src="@images/cat/5n.png" alt=""></a>
+                    <a href="">Бульдозеры</a>
+                </li>
+                <li class="sidebar__category-item">
+                    <a href="">  <img src="@images/cat/5.png" alt=""></a>
+                    <a href="">Бульдозеры</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="sidebar__widget">
+        <div class="sidebar__title-wrapp"><h3 class="sidebar__title"><span>Последние новости</span></h3></div>
+        <div class="sidebar__widget-wrapper">
+            <ul class="sidebar__news-list">
+                <li class="sidebar__news-item">
+                    <a href="">  <img src="@images/news/bi.jpg" alt=""></a>
+                    <a href="">Начались испытания беспилотных Компания “MAN”</a>
+                </li>
+                <li class="sidebar__news-item">
+                    <a href="">  <img src="@images/news/bi.jpg" alt=""></a>
+                    <a href="">Начались испытания беспилотных</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</div>

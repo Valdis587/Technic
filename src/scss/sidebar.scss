@@ -1,0 +1,140 @@
+.sidebar {
+  padding: 0 5px;
+ display: flex;
+ flex-direction: column;
+ row-gap: 10px;
+
+ &__title-wrapp::before {
+content: " ";
+  display: table;
+}
+
+&__title {
+position: relative;
+ border-bottom: 3px solid;
+border-bottom-color: currentcolor;
+  border-color: $ColorBlue;
+  font-size: 100%;
+  padding: 0;
+  margin: 0px 0px -1px 0px;
+  height: 40px;
+}
+    &__title::before {
+    content: "";
+  border: 1px solid $ColorBorder;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 0;
+  right: 0;
+    }
+    &__title::after {
+        display: none;
+    }
+    &__title span {
+        display: inline-block;
+        font-size: 16px;
+        text-transform: uppercase;
+        position: relative;
+        color: #fff;
+        line-height: 40px;
+        padding: 0 18px;
+        background-color: $ColorBlue;
+    }
+    &__title span::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        width: 0;
+        height: 0;
+        border-bottom: 40px solid $ColorBlue;
+        right: -19px;
+        border-right: 20px solid transparent;
+    }
+    &__widget-wrapper, .widget_archive ul, .widget_categories ul {
+      padding: 10px;
+      border: 1px solid $ColorBorder;
+      border-radius: 5px;
+    .cart__reviews-img {
+      display: block;
+    }
+    & .cart__vakan-content {
+     display: grid;
+     grid-template-columns: 100%;
+     grid-template-rows: 150px auto;
+     gap: 5px;
+     align-items: center;
+     img {
+      height: 150px;
+     }
+    }
+    & .cart__vakan-text {
+      display: grid;
+      grid-template-rows: 25px 25px;
+      gap: 5px;
+      text-align: center;
+    }
+      .cart__vakan-desc {
+        display: none;
+      }
+    }
+    &__button-wrapp {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .widget_archive ul, .widget_categories ul {
+      a:hover {
+        color: $ColorYellow;
+      }
+    }
+    &__category-list, &__news-list, .widget_archive ul, .widget_categories ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    &__category-item, &__news-item {
+      border: 1px solid $ColorBorder;
+      border-radius: 3px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        width: 70px;
+        height: 50px;
+        border-radius: 3px;
+        transition: 0.3s all ease 0.3s;
+       
+      }
+      img:hover {
+        border-color: 1px solid $ColorYellow;
+      }
+      a:hover {
+        color: $ColorYellow;
+      }
+    }
+    &__searchform {
+      display: grid;
+      grid-template-columns: auto 40px;
+      align-items: center;
+    }
+    &__searchform-input {
+      border: 1px solid $ColorBorder;
+      border-radius: 3px;
+      padding: 10px 5px;
+    }
+    &__searchform-button {
+      background-color: $ColorBlue;
+      color: $ColorWhite;
+      padding: 11px;
+      border-radius: 3px;
+      transition: 0.3s all ease 0.3s;
+    }
+    &__searchform-button:hover {
+      background-color: $ColorYellow;
+    }
+}

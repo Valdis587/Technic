@@ -1,0 +1,123 @@
+.header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 999;
+   &__top-line {
+      background-color: $ColorBlue;    
+   }
+   &__top-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      color: $ColorWhite;
+      padding: 10px 5px;
+   }
+   &__top-contact-list {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 5px;
+      align-items: center;
+      @media (max-width: 530px) { 
+         flex-direction: column;
+         margin: 0 auto;
+    }
+   }
+   &__top-contact-list {
+      li {
+         display: flex;
+         align-items: center;
+         gap: 5px;
+      }
+      i {
+        color: $ColorYellow;
+      }
+      a:hover {
+         color: $ColorYellow;
+      }
+   }
+   &__top-icon-list {
+      @media (max-width: 530px) { 
+         display: none;
+    }
+   }
+   &__burger {
+      font-size: 30px;
+      display: none;
+      padding: 0 5px;
+  }
+   &__center-line {
+      background-color: #ffffff;
+      padding: 10px 0;
+      @media (max-width: 810px) {
+       border-bottom: 2px solid $ColorYellow;
+     }
+   }
+   &__center-content {
+      padding: 20px 5px;
+      display: grid;
+      
+      grid-template-columns: 300px auto 300px;
+      align-items: center;
+      gap: 5px;
+      justify-content: space-between;
+      @media (max-width: 980px) { 
+         grid-template-columns: auto 300px;
+   }
+   @media (max-width: 680px) {
+      padding: 5px 0;
+      grid-template-columns: 100%;
+      gap: 10px;
+}
+}
+   &__center-logo {
+      max-width: 250px;
+      color: #ffffff;
+      @media (max-width: 980px) { 
+        display: none; 
+      }
+      @media (max-width: 680px) {
+       display: block;
+       margin: 0 auto;
+   }
+   }
+   &__center-slogan {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      text-align: center;
+      padding: 0 5px;
+      @media (min-width: 980px) {
+      border-left: 1px solid $ColorBorder;
+      border-right: 1px solid $ColorBorder;
+      }
+   }
+   &__center-title {
+      @include funcAdaptiv(font-size, 18, 25);
+      line-height: 110%;
+      color: $ColorBlue;
+      font-weight: 700;
+   }
+   &__center-desc {
+      @include funcAdaptiv(font-size, 16, 20);
+      line-height: 110%;
+      font-style: italic;
+      color: $ColorYellow;
+   }
+   &__center-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      text-align: center;
+   }
+ 
+   &__center-button {
+      align-self: center;
+   }
+   &__bottom-line {
+      background-color: $ColorBlue;
+   }
+}
+

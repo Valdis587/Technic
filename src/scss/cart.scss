@@ -1,0 +1,321 @@
+.cart {
+   
+    &__border-color {
+        border: 3px solid $ColorYellow;
+        border-radius: 3px;
+    }
+    &__border {
+        border: 1px solid $ColorBorder;
+        border-radius: 3px;
+    }
+    &__news {
+        display: grid;
+        grid-template-rows: 200px minmax(50px, auto);
+        gap: 5px;
+    }
+    &__img-news { 
+        img {
+            width: 100%;
+            height: 200px;
+            border-radius: 3px;
+            object-fit: cover;
+        }
+    }
+    &__content-news {
+        p {
+            padding: 0;
+        }
+        padding: 5px;
+        display: grid;
+        grid-template-rows: 20px minmax(20px, 50px) minmax(30px, auto) 60px;
+        gap: 10px;
+    }
+    &__content-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        i {
+            font-size: 14px;
+            color: $ColorYellow;
+            margin: 0 5px 0 0;
+        }
+    }
+     
+    &__title {
+        font-size: 20px;
+        line-height: 110%;
+        cursor: pointer;
+        color: $ColorBlue;
+    }
+    &__title:hover {
+        color: $ColorYellow;
+    }
+    &__news-button-wrap {
+        align-self: center;
+        justify-self: center;
+    }
+    &__news-single {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0 10px;
+    }
+    &__news-single-title {
+     @include funcAdaptiv(font-size, 20, 30);
+      line-height: 110%;
+    }
+   &__news-single-img {
+    max-width: 1200px;
+    img {
+        width: 100%;
+        height: 500px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+   }
+   &__reviews-img {
+    max-width: 100px;
+    margin: 0 auto;
+    display: none;
+    padding: 5px;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        border: 3px solid $ColorYellow;
+    }
+}
+&__reviews-content {
+    padding: 5px;
+}
+&__reviews-reviews {
+    font-style: italic;
+   }
+   
+   &__reviews-text {
+   display: flex;
+   flex-direction: column;
+    gap: 5px;
+   }
+   &__reviews-name, &__vakan-name {
+    font-size: 20px;
+    color: $ColorBlue;
+   }
+   &__reviews-job {
+    font-size: 18px;
+    color: $ColorYellow;
+   }
+   &__reviews-date {
+    color: $ColorRed;
+   }
+ 
+   &__vakan-content {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 5px 10px;
+    @media (max-width: 900px) {
+        grid-template-columns: 100%;
+    }
+   }
+   &__vakan-img {
+    max-width: 100%;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+   }
+   &__vakan-text {
+    padding: 5px;
+   display: flex;
+   flex-direction: column;
+    gap: 5px;
+   }
+   &__vakan-price {
+    color: $ColorRed;
+    font-size: 18px;
+}
+
+&__project-img {
+    position: relative;
+    max-width: 100%;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        border-radius: 5px;
+    }
+}
+&__project-info {
+    background-color: rgba(5, 24, 41, 0.9);
+    width: 95%;
+  height: 92%;
+  border: 2px solid $ColorYellow;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 0 5px;
+  border-radius: 5px;
+  @media (min-width: 810px) { 
+    opacity: 0;
+    left: 0;
+    top: -5%;
+    transform: translate(0, 0);
+}
+}
+&__project-name {
+    color: $ColorWhite;
+    @include funcAdaptiv(font-size, 18, 20);
+    text-align: center;
+    line-height: 110%;
+}
+&__project-city {
+    color: $ColorYellow;
+    font-size: 18px;
+}
+&__project-price {
+    color: $ColorRed;
+}
+&__project:hover {
+    .cart__project-info {
+        opacity: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+&__service {
+    position: relative;
+
+}
+&__service-wrapper {
+    @include funcAdaptiv(font-size, 16, 20);
+}
+   &__service-img { 
+    max-width: 100%;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        border-radius: 3px;
+    }
+   }
+   &__service-info {
+    color: $ColorWhite;
+    font-size: 20px;
+    line-height: 110%;
+   }
+   &__service-wrapper {
+    width: 100%;
+    padding: 10px; 
+    position: absolute;
+    background-color: $ColorBlue;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    a:hover {
+        color: $ColorYellow;
+    } 
+    i {
+        color: $ColorYellow; 
+    }
+   }
+
+   &__catalog-img {
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    img {
+        width: 100%;
+        height: 200px;
+        border-radius: 3px;
+        object-fit: cover;
+    }
+   }
+   &__catalog-quick {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $ColorBlue;
+    color: $ColorWhite;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all ease 0.3s;
+    @media (max-width: 810px) {
+       display: none;
+     }
+   }
+   &__catalog:hover {
+    .cart__catalog-quick {
+        visibility: visible;
+        opacity: 1;
+    }
+   }
+   &__catalog-info {
+    margin: 5px 0 0 0;
+    display: grid;
+    grid-template-rows: minmax(20px, 40px) 60px 50px;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 10px;
+   }
+   &__catalog-name {
+    text-align: center;
+    font-size: 20px;
+    line-height: 110%;
+   }
+   &__catalog-name:hover {
+    color: $ColorYellow;
+   }
+   &__catalog-spec-wrapp  {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   align-items: center;
+   }
+   &__catalog-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+    border-bottom: 1px solid $ColorBorder;
+   }
+    &__catalog-button-wrapp {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    gap: 10px 5px;
+   }
+   &__catalog-gruz-ves, &__catalog-price {
+    text-align: left;
+   }
+   &__catalog-gruz-ves, &__catalog-gruz-coint {
+    text-align: right;
+    font-weight: 700;
+   }
+   &__catalog-button-wrapp {
+    text-align: center;
+   }
+}

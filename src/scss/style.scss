@@ -1,0 +1,198 @@
+@import "node_modules/swiper/swiper.scss";
+@import "node_modules/swiper/modules/navigation.scss";
+@import "node_modules/swiper/modules/effect-fade.scss";
+@import "node_modules/swiper/modules/thumbs.scss";
+@import "base/null.scss";
+@import "base/mixin";
+@import "fonts";
+
+:root {
+   --ColorBlue: #13172B;
+   --ColorWhite: #ffffff;
+   --ColorYellow: #E8A41D;
+   --ColorBlack: #000000;
+   --ColorFooter: #232323;
+   --ColorTextFooter: #666666;
+   --ColorBorder: #dddddd;
+   --ColorRed: #EB1F1C;
+   --ColorGreen: #0d8042;
+}
+
+$minWidth: 320;
+$maxWidthContainer: 1590;
+$padding: 15;
+
+$ColorBlue: var(--ColorBlue);
+$ColorWhite: var(--ColorWhite);
+$ColorBlack: var(--ColorBlack);
+$ColorYellow: var(--ColorYellow);
+$ColorFooter: var(--ColorFooter);
+$ColorTextFooter: var(--ColorTextFooter);
+$ColorBorder: var(--ColorBorder);
+$ColorRed: var(--ColorRed);
+$ColorGreen: var(--ColorGreen);
+
+
+.container {
+   max-width: #{$maxWidthContainer}px;
+   padding: 0 #{$padding}px;
+   margin: 0 auto;
+}
+
+.wrapper {
+	min-height: 100%;
+   display: flex;
+   flex-direction: column;
+	position: relative;
+	overflow-x: hidden;
+}
+.content-wrapper {
+   flex-grow: 1;
+	margin: 252px 0 50px 0;
+	max-width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+   z-index: 1;
+}
+.social {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   padding: 5px;
+   align-items: center;
+   i {
+      font-size: 20px;
+   }
+   li {
+      padding: 5px;
+      border: 1px solid $ColorWhite;
+     border-radius: 5px;
+     transition: 0.3s all ease 0.3s;
+   }
+   li:hover{
+      color: $ColorYellow;
+      border: 1px solid $ColorYellow;
+   }
+}
+.button-yellow {
+   font-size: 18px;
+   background-color: $ColorYellow;
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: 2px solid $ColorBlue;
+   color: $ColorBlue;
+   transition: 0.3s all ease 0.3s;
+}
+.button-yellow:hover {
+   background-color: $ColorBlue;
+   border: 2px solid $ColorYellow;
+   color: $ColorYellow;
+}
+.button-blue {
+   font-size: 18px;
+   background-color:  $ColorBlue;
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: 2px solid $ColorYellow;
+   color: $ColorYellow;
+   transition: 0.3s all ease 0.3s;
+}
+.button-blue:hover {
+   background-color: $ColorYellow;
+   border: 2px solid $ColorBlue;
+   color: $ColorBlue;
+}
+.home-title-wrapper {
+   margin: 10px 0 30px 0;
+}
+.home-title, .home-title-onas {
+   @include funcAdaptiv(font-size, 20, 40);
+   line-height: 110%;
+   text-align: center;
+   padding: 50px 0 10px 0;
+   position: relative;
+   font-weight: 600;
+}
+.home-title::after {
+   position: absolute;
+   height: 5px;
+   content: "";
+   background-color: $ColorYellow;
+   width: 100px;
+   left: 50%;
+   bottom: 0px;
+   transform: translateX(-50%);
+}
+.home-desc {
+   text-align: center;
+  
+   font-size: 18px;
+   line-height: 110%;
+   padding: 15px 5px 0 5px;
+}
+footer {
+  margin-top: auto;
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+   background-color: $ColorBlue;
+   width: 40px;
+   height: 40px;
+   border: 2px solid $ColorWhite;
+   border-radius: 100%;
+   color: $ColorWhite;
+   transition: 0.3s all ease 0.3s;
+   @media (max-width: 460px) { 
+      display: none;
+   }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+   background-color: $ColorYellow;
+   
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+   font-size: 20px
+} 
+
+.site-table {
+   width: 100%;
+   text-align: center;
+   border: 1px solid #dddddd;
+   border-collapse: collapse; 
+   thead {
+       background-color: $ColorBlue;
+       color: $ColorWhite;
+      
+   }
+   th, td {
+       padding: 5px; 
+       border: 1px solid #dddddd;
+   }
+   tbody {
+   tr:nth-child(odd) {
+       background: #fff;
+   }
+   tr:nth-child(even) {
+       background: #d8d8d8;
+   }
+}
+}
+
+@import "./wp/wpstyle.scss";
+
+@import "preloader";
+@import "header";
+@import "menu";
+@import "headpanel";
+@import "archive";
+@import "single";
+@import "home";
+@import "page";
+@import "cart";
+@import "sidebar";
+@import "form";
+@import "footer";
+
+
+
