@@ -9,13 +9,9 @@
 
 get_header();
 get_template_part( 'template-parts/content', 'head' );
-?>
 
-<div class="archive container">
-    <div class="archive__sidebar-right">
-	<div class="archive__content">
-	<div class="archive__cart-col cart">
-		<?php
+do_action( 'start_wrapper_arhive_sidebar_right' );
+
 		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -35,12 +31,5 @@ get_template_part( 'template-parts/content', 'head' );
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
-	</div>
-		<?php wp_main_pagination() ?>
-		</div>
-		<?php get_sidebar(); ?>
-    </div>
-</div>
-<?php
+		do_action( 'end_wrapper_arhive_sidebar_right' );
 get_footer();

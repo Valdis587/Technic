@@ -43,6 +43,8 @@ require get_template_directory() . '/includes/functions/faq.php';
 
 require get_template_directory() . '/includes/functions/zak.php';
 
+require get_template_directory() . '/includes/functions/hoock.php';
+
 require get_template_directory() . '/includes/admin/redux.php';
 
 require get_template_directory() . '/includes/admin/theme/config.php';

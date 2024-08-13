@@ -11,10 +11,8 @@ get_header();
 get_template_part( 'template-parts/content', 'head' );
 global $technic;
 $value = redux_post_meta( 'technic', 'proekty' );
+do_action( 'start_wrapper_single_sidebar_right' ); 
 ?>
-<div class="archive container">
-    <div class="archive__sidebar-right">
-            <div class="archive__cart-row single">
                 <div class="single__top">
                 <?php if(!$value['proekty-gallery-on']) { ?>
                 <div class="single__img-thumb">
@@ -55,7 +53,7 @@ $value = redux_post_meta( 'technic', 'proekty' );
                                 <?php } ?>
                             </div>
                         </div>
-                        <?php } ?>
+                        <?php } ?> 
                     </div>
                     <?php } ?>
                     <div class="single__top-info">
@@ -71,9 +69,5 @@ $value = redux_post_meta( 'technic', 'proekty' );
                 <div class="single__buttom-text">
                 <?php the_content(); ?>
                 </div>
-            </div> 
-            <?php get_sidebar(); ?>
-    </div>
-</div>
-<?php
+<?php do_action( 'end_wrapper_single_sidebar_right' );
 get_footer();

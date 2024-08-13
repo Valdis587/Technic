@@ -12,7 +12,7 @@ get_template_part( 'template-parts/content', 'head' );
 global $technic;
 global $value;
 $value = redux_post_meta( 'technic', 'katalog' );
-?>
+?> 
 <div class="archive container">
     <div class="archive__sidebar-left">
             <div class="archive__cart-row single">

@@ -9,12 +9,9 @@
 
 get_header();
 get_template_part( 'template-parts/content', 'head' );
-?>
-<div class="archive container">
-    <div class="archive__sidebar-right">
-	<div class="archive__content">
-	<div class="archive__cart-row cart">
-    <?php
+
+do_action( 'start_wrapper_arhive_row_sidebar_right' );
+
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $args = array(
                                 'order' 	 => 'DESC',
@@ -28,12 +25,5 @@ get_template_part( 'template-parts/content', 'head' );
                                 get_template_part( 'template-parts/content', 'vakansii' );
 			endwhile;
 		endif;
-		?>
-	</div>
-		<?php wp_main_pagination() ?>
-		</div>
-		<?php get_sidebar(); ?>
-    </div>
-</div>
-<?php
+        do_action( 'end_wrapper_arhive_row_sidebar_right' );
 get_footer();
