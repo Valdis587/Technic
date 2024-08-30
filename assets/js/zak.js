@@ -12,10 +12,10 @@ $(document).ready(function ($) {
                     type: 'POST',
                     dataType: 'json',
                     beforeSend: function (xhr) {
-                        $('.popup-zak__wrapper').text('Загрузка');
+                        $('.popup-zak__left').text('Загрузка');
                 },
                 success: function (data) {
-                        $('.popup-zak__wrapper').html(data.product); 
+                        $('.popup-zak__left').html(data.product); 
                 }
             })
     })
